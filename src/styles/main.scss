@@ -10,15 +10,28 @@
 @import './components/button';
 @import './components/dropdown.scss';
 
-@import './layout/header';
-@import './layout/navigation';
-@import './layout/footer';
-
-@import './pages/home';
-@import './pages/contact';
-
 @import './themes/dark';
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+html {
+  background: url('../assets/img/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
 
 
 
