@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 @import './abstracts/variables';
-@import './abstracts/functions';
-@import './abstracts/mixins';
 @import './abstracts/placeholders';
 
 @import './base/reset';
@@ -11,9 +9,6 @@
 @import './components/dropdown.scss';
 
 @import './themes/dark';
-
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
 
 *{
   box-sizing: border-box;
@@ -30,7 +25,7 @@ html {
 
 body{
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: $primary-font;
 }
 
 
