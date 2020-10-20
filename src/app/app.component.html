@@ -1,12 +1,12 @@
 <header class="header">
-  <a href="#"><img src="assets/img/logo.png" alt="Logo" class="logo"></a>
+  <a routerLink="/"><img src="assets/img/logo.png" alt="Logo" class="logo"></a>
   <nav class="desktop__nav">
     <ul class="nav__list">
-      <li><a href="#" class="nav__item">HOME</a></li>
-      <li><a href="#" class="nav__item">ABOUT</a></li>
-      <li><a href="#" class="nav__item">PROJECTS</a></li>
-      <li><a href="#" class="nav__item">RESUME</a></li>
-      <li><a href="#" class="nav__item">CONTACT</a></li>
+      <li><a class="nav__item" routerLink="/" routerLinkActive="activeNav" [routerLinkActiveOptions]="{exact:true}">HOME</a></li>
+      <li><a class="nav__item" routerLink="/about" routerLinkActive="activeNav">ABOUT</a></li>
+      <li><a class="nav__item" routerLink="/projects" routerLinkActive="activeNav">PROJECTS</a></li>
+      <li><a class="nav__item" routerLink="resume" routerLinkActive="activeNav">RESUME</a></li>
+      <li><a class="nav__item" routerLink="contact" routerLinkActive="activeNav">CONTACT</a></li>
     </ul>
   </nav>
   <button class="menu" (click)="toggleClass()">
@@ -18,12 +18,12 @@
   </button>
 </header>
 <nav class="nav" [class.toggle]="classApplied">
-  <ul class="nav__list fade-in">
-    <li><a href="#" class="nav__item">HOME</a></li>
-    <li><a href="#" class="nav__item">ABOUT</a></li>
-    <li><a href="#" class="nav__item">PROJECTS</a></li>
-    <li><a href="#" class="nav__item">RESUME</a></li>
-    <li><a href="#" class="nav__item">CONTACT</a></li>
+  <ul class="nav__list">
+    <li><a class="nav__item" routerLink="/" routerLinkActive="activeNav" [routerLinkActiveOptions]="{exact:true}">HOME</a></li>
+    <li><a class="nav__item" routerLink="/about" routerLinkActive="activeNav">ABOUT</a></li>
+    <li><a class="nav__item" routerLink="/projects" routerLinkActive="activeNav">PROJECTS</a></li>
+    <li><a class="nav__item" routerLink="/resume" routerLinkActive="activeNav">RESUME</a></li>
+    <li><a class="nav__item" routerLink="/contact" routerLinkActive="activeNav">CONTACT</a></li>
   </ul>
   <div class="icons">
     <a href="https://www.facebook.com/zhonzholadze/"><img class="icons__item" src="assets/icons/iconmonstr-facebook-3.svg" alt="Facebook"></a>

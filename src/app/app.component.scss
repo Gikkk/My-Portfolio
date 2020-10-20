@@ -67,7 +67,7 @@
 
     .desktop__nav{
       display: block;
-      padding-right: 3rem;
+      padding-right: 2rem;
 
       .nav__list{
         display: grid;
@@ -84,6 +84,11 @@
         font-weight: 800;
         font-size: 1rem;
         color: $font-color;
+        padding-bottom: 0.3rem;
+
+        &:hover{
+          border-bottom: 3px solid $border;
+        }
       }
     }
   }
@@ -156,6 +161,12 @@
 .desktop__nav{
   display: none;
 }
+
+.activeNav{
+  color: $border !important;
+  border-bottom: 3px solid $font-color;
+}
+
 
 
 // radial menu
