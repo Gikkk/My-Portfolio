@@ -4,9 +4,10 @@
 .intro{
   display: grid;
   justify-content: center;
-  margin: 4rem 1rem 0 1rem;
+  align-items: center;
   text-align: center;
   animation: showIn 4s forwards;
+  font-family: $secondary-font;
 
   .intro__greet{
     margin: 0;
@@ -16,6 +17,10 @@
   .intro__name{
     margin: 0;
     color: $font-color;
+  }
+
+  .intro__name--highlighted{
+    animation: colorChange 20s infinite alternate;
   }
 
   .intro__dev{
@@ -34,6 +39,7 @@
     background: linear-gradient(to right, $btn-background 50%, $hover-btn 50%);
     background-size: 200% 100%;
     background-position: right bottom;
+    -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 
     &:hover{
@@ -55,6 +61,7 @@
     background: linear-gradient(to right, $hover-btn 50%, $btn-background 50%);
     background-size: 200% 100%;
     background-position: right bottom;
+    -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 
     &:hover{
@@ -62,10 +69,6 @@
       background-position: left bottom;
     }
   }
-}
-
-.intro__name--highlighted{
-  animation: colorChange 20s infinite alternate;
 }
 
 @keyframes colorChange {
