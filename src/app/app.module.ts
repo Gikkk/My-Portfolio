@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { MapComponent } from './contact/map/map.component';
 
 const appRoutes:Routes = [
   {path: "", component: HomepageComponent},
@@ -26,6 +27,7 @@ const appRoutes:Routes = [
     ContactComponent,
     ResumeComponent,
     HomepageComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

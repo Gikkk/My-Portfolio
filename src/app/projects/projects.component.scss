@@ -5,6 +5,11 @@
   justify-items: center;
   padding: 1rem;
   row-gap: 2rem;
+  margin-top: 4rem;
+
+  .projects__title{
+    color: $font-color;
+  }
 
   .projects__list{
     display: grid;
@@ -64,6 +69,11 @@
         width: 400px;
         height: 350px;
       }
+
+      .projects__item--highlighted{
+        top: 60%;
+        left: 42%;
+      }
     }
   }
 
@@ -103,6 +113,6 @@
 
 @media (min-width: 1424px){
   .projects{
-    grid-template-rows: 1fr 1fr 8fr 0.5fr;
+    grid-template-rows: 1fr 8fr 0.5fr;
   }
 }

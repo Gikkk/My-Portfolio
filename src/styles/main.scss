@@ -10,9 +10,12 @@
 
 @import './themes/dark';
 
+@import "~leaflet/dist/leaflet.css";
+
 *{
   box-sizing: border-box;
 }
+
 
 html {
   background: url('../assets/img/background.jpg') no-repeat center center fixed;
