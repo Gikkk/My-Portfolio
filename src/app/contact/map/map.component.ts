@@ -9,23 +9,17 @@ import * as L from 'leaflet';
 })
 export class MapComponent implements AfterViewInit {
 
-  map: L.Map
+  map: L.Map;
 
   ngAfterViewInit(): void {
 
-    this.map = L.map('map', {
-      center: [ 25.3791924,55.4765436 ],
-      zoom: 15,
-      renderer: L.canvas()
-    });
+    this.map = L.map('map').setView([41.909998, 45.496760], 14);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap',
+      attribution: '© OpenStreetMap'
     }).addTo(this.map);
 
-    setTimeout(() => {
-      this.map.invalidateSize();
-    }, 0);
-
+    const marker = L.marker([41.909998, 45.496760]).addTo(this.map);
+    marker.bindPopup("<b>Here I am!</b>").openPopup();
   }
 }
