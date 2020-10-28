@@ -23,11 +23,12 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
+  position: relative;
+  min-height: 100%;
 }
 
 body{
-  margin: 0;
+  margin: 0 0 60px 0;
   font-family: $primary-font;
 }
 

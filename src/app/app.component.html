@@ -5,8 +5,7 @@
       <li><a class="nav__item" routerLink="/" routerLinkActive="activeNav" [routerLinkActiveOptions]="{exact:true}">HOME</a></li>
       <li><a class="nav__item" routerLink="/about" routerLinkActive="activeNav">ABOUT</a></li>
       <li><a class="nav__item" routerLink="/projects" routerLinkActive="activeNav">PROJECTS</a></li>
-      <li><a class="nav__item" routerLink="resume" routerLinkActive="activeNav">RESUME</a></li>
-      <li><a class="nav__item" routerLink="contact" routerLinkActive="activeNav">CONTACT</a></li>
+      <li><a class="nav__item" routerLink="/contact" routerLinkActive="activeNav">CONTACT</a></li>
     </ul>
   </nav>
   <button class="menu" (click)="toggleClass()">
@@ -22,7 +21,6 @@
     <li><a class="nav__item" routerLink="/" routerLinkActive="activeNav" [routerLinkActiveOptions]="{exact:true}">HOME</a></li>
     <li><a class="nav__item" routerLink="/about" routerLinkActive="activeNav">ABOUT</a></li>
     <li><a class="nav__item" routerLink="/projects" routerLinkActive="activeNav">PROJECTS</a></li>
-    <li><a class="nav__item" routerLink="/resume" routerLinkActive="activeNav">RESUME</a></li>
     <li><a class="nav__item" routerLink="/contact" routerLinkActive="activeNav">CONTACT</a></li>
   </ul>
   <div class="icons">
@@ -48,6 +46,15 @@
 
 <!-- components place -->
 <router-outlet></router-outlet>
+
+<!-- footer  -->
+<footer>
+  <p class="copyright">Copyright &#169; 2020 all rights reserved</p>
+  <div class="test">
+    <img src="../assets/img/footer.png" alt="person">
+    <h2>Hire Me</h2>
+  </div>
+</footer>
 
 
 

@@ -7,15 +7,14 @@ import { AppComponent } from './app.component';
 import { ProjectsComponent} from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { ResumeComponent } from './resume/resume.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MapComponent } from './contact/map/map.component';
+import { CarouselComponent } from './homepage/carousel/carousel.component';
 
 const appRoutes:Routes = [
   {path: "", component: HomepageComponent},
   {path: "about", component: AboutComponent},
   {path: "projects", component: ProjectsComponent},
-  {path: "resume", component: ResumeComponent},
   {path: "contact", component: ContactComponent}
 ]
 
@@ -25,9 +24,9 @@ const appRoutes:Routes = [
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
-    ResumeComponent,
     HomepageComponent,
     MapComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
