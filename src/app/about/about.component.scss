@@ -1,29 +1,35 @@
 @import "../../styles/abstracts/variables";
 
 .info{
-  display: flex;
-  justify-content: center;
   padding: 5rem 1rem 1rem 1rem;
-}
-
-.info__img{
-  width: 350px;
-  height: 400px;
-  border: 3px solid $hover-btn;
-  border-radius: 0.5rem;
-}
-
-.details{
-  padding: 0 1rem;
-}
-
-.details__text{
-  max-width: 400px;
-}
-
-.details__info{
   display: grid;
-  grid-template-columns: 120px auto;
+  justify-content: center;
+
+  .info__img{
+    width: 90vw;
+    height: 350px;
+    border: 3px solid $hover-btn;
+    border-radius: 0.5rem;
+  }
+
+  .details__text{
+    max-width: 400px;
+  }
+
+  .details__info{
+    display: grid;
+    grid-template-columns: 120px auto;
+  }
+}
+
+.education{
+  padding: 1rem;
+  background: url('../../assets/img/education-bg.png') no-repeat;
+  background-size: cover;
+}
+
+.language{
+  padding: 1rem;
 }
 
 .intro__btn--highlighted{
