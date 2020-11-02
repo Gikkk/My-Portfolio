@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-between;
   background: $background;
-  padding: 0 1rem;
+  padding: 0.4rem 1rem 0 1rem;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -182,8 +182,6 @@
   display: none;
 }
 
-
-
 // radial menu
 .circular__menu {
   position: fixed;
@@ -193,8 +191,8 @@
 
   .circular__btn {
     display: none;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     border: 2px solid $hover-btn;
     background-color: $btn-background;
@@ -215,8 +213,8 @@
     height: 3.5rem;
     border-radius: 50%;
     position: absolute;
-    top: 0.2rem;
-    right: 0.5rem;
+    top: 0;
+    right: 1.5rem;
     z-index: -2;
     background-color: $background;
     -webkit-transition: all .3s ease;
@@ -238,8 +236,8 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     background-color: hsla(0,0%,0%,.4);
     -webkit-transition: transform .3s ease, background .2s ease;
@@ -279,7 +277,7 @@
   }
 
   .menu-item:nth-child(3) {
-    transform: translate3d(5.8rem, 2.5rem,0);
+    transform: translate3d(5.5rem, 2.5rem,0);
   }
 
   .menu-item:nth-child(4) {
@@ -301,13 +299,9 @@
   }
 }
 
-// footer
-footer{
-  display: none;
-}
 
 @media (min-width: 640px){
-  footer{
+  .footer{
     height: 60px;
     position: absolute;
     bottom: 0;
@@ -318,20 +312,20 @@ footer{
     padding: 0 2rem;
     background: $background;
 
-    p{
+    .copyright{
       margin: 0 1rem 0 0;
     }
 
-    .test{
+    .footer__content{
       display: flex;
       align-items: center;
 
-      h2{
+      .footer__text{
         margin: 0;
       }
     }
 
-    img{
+    .footer__img{
       width: 55px;
       height: 55px;
       margin-right: 1rem;
