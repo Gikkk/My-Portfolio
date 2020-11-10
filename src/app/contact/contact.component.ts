@@ -8,7 +8,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   constructor(private renderer: Renderer2) {
-    this.renderer.setStyle(document.body, 'background-color', "url(https://www.imgacademy.com/themes/custom/imgacademy/images/helpbox-contact.jpg)");
+    this.renderer.setStyle(document.body, 'margin', "0");
   }
 
   ngOnInit(): void {
