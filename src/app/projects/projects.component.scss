@@ -3,7 +3,7 @@
 .projects{
   display: grid;
   justify-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   row-gap: 2rem;
   margin-top: 4rem;
 
@@ -31,18 +31,7 @@
       width: 290px;
       height: 250px;
       border: 3px solid $hover-btn;
-
       border-radius: 0.5rem;
-    }
-
-    .projects__item--hoverable{
-      position: absolute;
-      width: 290px;
-      height: 250px;
-      background: linear-gradient(to right, rgba(139, 42, 177, 0.849) 20%, rgba(16, 104, 163, 0.829) 100%);
-      z-index: -1;
-      border-radius: 0.5rem;
-      border: 3px solid $border;
     }
 
     .projects__item--highlighted{
@@ -52,27 +41,53 @@
       left: 41%;
     }
 
+    &:before {
+      transition: all .5s ease;
+      content: "";
+      position: absolute;
+      border-radius: 0.5rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #333;
+      transform: scale(0);
+    }
+
+    &:hover:before {
+      opacity: .5;
+      transform: scale(1);
+    }
+
+    &::after {
+      transition: all .6s ease .2s;
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      border: 1px solid #aaa;
+      background: #000;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    &:hover:after {
+      opacity: .35;
+      transform: scale(1);
+    }
+
     &:hover{
       .projects__item--highlighted{
         -webkit-transition: .5s ease-in-out;
         transition: .5s ease-in-out;
         z-index: 3;
       }
-
-      .projects__item--hoverable{
-        z-index: 2;
-        -webkit-transition: .5s ease-in-out;
-        transition: .5s ease-in-out;
-      }
     }
 
     @media (min-width: 1600px){
       .projects__item{
-        width: 400px;
-        height: 350px;
-      }
-
-      .projects__item--hoverable{
         width: 400px;
         height: 350px;
       }
@@ -118,11 +133,12 @@
   }
 }
 
-@media (min-width: 1600px){
+  @media (min-width: 1600px){
   .projects{
     grid-template-rows: 1fr 1fr 15fr 0.5fr;
   }
 }
+
 
 
 
