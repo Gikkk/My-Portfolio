@@ -10,6 +10,9 @@ import { ContactComponent } from './contact/contact.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { MapComponent } from './contact/map/map.component';
 import { CarouselComponent } from './homepage/carousel/carousel.component';
+import { HeaderComponent } from './universal/header/header.component';
+import { FooterComponent } from './universal/footer/footer.component';
+import { CircularMenuComponent } from './universal/circular-menu/circular-menu.component';
 
 const appRoutes:Routes = [
   {path: "", component: HomepageComponent},
@@ -27,6 +30,9 @@ const appRoutes:Routes = [
     HomepageComponent,
     MapComponent,
     CarouselComponent,
+    HeaderComponent,
+    FooterComponent,
+    CircularMenuComponent,
   ],
   imports: [
     BrowserModule,

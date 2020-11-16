@@ -1,0 +1,38 @@
+@import "../../../styles/abstracts/variables";
+
+.footer{
+  display: none;
+}
+
+@media (min-width: 640px){
+  .footer{
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    background: $background;
+
+    .copyright{
+      margin: 0 1rem 0 0;
+    }
+
+    .footer__content{
+      display: flex;
+      align-items: center;
+
+      .footer__text{
+        margin: 0;
+      }
+    }
+
+    .footer__img{
+      width: 55px;
+      height: 55px;
+      margin-right: 1rem;
+    }
+  }
+}
