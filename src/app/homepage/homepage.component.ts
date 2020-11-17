@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, Renderer2, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-homepage',
@@ -9,7 +9,9 @@ export class HomepageComponent implements OnInit{
 
 
 
-  constructor() {}
+  constructor(private renderer: Renderer2) {
+    this.renderer.setStyle(document.body, 'margin-bottom', "60px");
+  }
 
   ngOnInit(): void {
     let TxtRotate = function(el, toRotate, period) {
