@@ -1,0 +1,126 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem 0 0 0;
+  text-decoration: underline;
+
+  .carousel__title{
+    font-size: 1.5rem;
+    color: $font-color;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .carousel__content {
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 380px;
+    max-height: 250px;
+    margin: 0;
+    perspective: 1000px;
+    transform-origin: center;
+
+    // This is the element that rotates with the animation
+    .carousel__content--rotateable{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-origin: center;
+      transform-style: preserve-3d;
+      transform: translateZ(-30vw) rotateY(0);
+      animation: carousel 10s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+
+      .carousel__content--rotateable.step-animation {
+        animation: carousel 14s infinite steps(1) forwards;
+      }
+    }
+
+    // Individual item
+    .carousel__item{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-width: 380px;
+      max-height: 250px;
+      transform-origin: center;
+      text-align: center;
+
+      .carousel__img{
+        padding: 0.2rem;
+        background: white;
+        border-radius: 1rem;
+        width: 128px;
+        height: 128px;
+      }
+
+      &:nth-child(1) {
+        transform: rotateY(0) translateZ(35vw);
+      }
+      &:nth-child(2) {
+        transform: rotateY(60deg) translateZ(35vw);
+      }
+      &:nth-child(3) {
+        transform: rotateY(120deg) translateZ(35vw);
+      }
+      &:nth-child(4) {
+        transform: rotateY(180deg) translateZ(35vw);
+      }
+      &:nth-child(5) {
+        transform: rotateY(240deg) translateZ(35vw);
+      }
+      &:nth-child(6) {
+        transform: rotateY(300deg) translateZ(35vw);
+      }
+
+      @media(min-width: 640px){
+        .carousel__img{
+          width: 200px;
+          height: 200px;
+        }
+      }
+
+      @media(min-width: 1600px){
+        .carousel__img{
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+// Carousel animation
+@keyframes carousel {
+  0%,
+  14.3% {
+    transform: translateZ(-35vw) rotateY(0);
+  }
+  29.3% {
+    transform: translateZ(-35vw) rotateY(-60deg);
+  }
+
+  44.3% {
+    transform: translateZ(-35vw) rotateY(-120deg);
+  }
+
+  59.3% {
+    transform: translateZ(-35vw) rotateY(-180deg);
+  }
+
+  74.3% {
+    transform: translateZ(-35vw) rotateY(-240deg);
+  }
+
+  87.3% {
+    transform: translateZ(-35vw) rotateY(-300deg);
+  }
+
+  100% {
+    transform: translateZ(-35vw) rotateY(-360deg);
+  }
+}
+

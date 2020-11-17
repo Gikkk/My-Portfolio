@@ -1,0 +1,115 @@
+.circular__menu {
+  position: fixed;
+  bottom: 48%;
+  left: -0.6rem;
+  z-index: 9999;
+
+  .circular__btn {
+    display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 2px solid $hover-btn;
+    background-color: $btn-background;
+    box-shadow: 0 2px 5px 0 $hover-btn;
+    cursor: pointer;
+    outline: 0;
+  }
+
+  .circular__icon{
+    -webkit-transition: all .3s ease;
+    transition: transform .2s;
+  }
+
+  &:after {
+    display: block;
+    content: ' ';
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    z-index: -2;
+    background-color: $background;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+  .menu__list {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-item {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: hsla(0,0%,0%,.4);
+    -webkit-transition: transform .3s ease, background .2s ease;
+    transition: transform .3s ease, background .2s ease;
+
+    &:hover {
+      background-color: $btn-background;
+      box-shadow: inset 0 0 10px $border;
+    }
+  }
+}
+
+.circular__menu.active {
+  .circular__btn {
+    box-shadow: inset 0 0 10px $border;
+  }
+
+  .circular__icon{
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: scale3d(5.5, 5.5, 1);
+    transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+  }
+
+  .menu-item {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .menu-item:nth-child(1) {
+    transform: translate3d(1rem,-5.9rem,0);
+  }
+
+  .menu-item:nth-child(2) {
+    transform: translate3d(5.3rem,-3rem,0);
+  }
+
+  .menu-item:nth-child(3) {
+    transform: translate3d(5.5rem, 2.5rem,0);
+  }
+
+  .menu-item:nth-child(4) {
+    transform: translate3d(1.5rem, 6.2rem,0);
+  }
+}
+
+@media (min-width: 640px) {
+  .circular__menu {
+    .circular__btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu__list {
+      display: block;
+    }
+  }
+}
