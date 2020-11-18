@@ -11,9 +11,6 @@ export class HeaderComponent implements OnInit {
 
   toggleClass(){
     this.classApplied = !this.classApplied;
-
-    const hamburger =  document.querySelector('.menu');
-    hamburger.classList.toggle('opened');
   }
 
   ngOnInit(): void {
