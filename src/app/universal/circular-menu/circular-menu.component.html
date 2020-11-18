@@ -1,5 +1,5 @@
-<div class="circular__menu">
-  <a class="circular__btn" (click)="activeClass()">
+<div class="circular__menu" (click)="activeClass()" [ngClass]="{'circular__btn--active' : active}">
+  <a class="circular__btn">
     <img src="../../assets/icons/plus.svg" alt="plus" class="circular__icon">
   </a>
   <menu class="menu__list">

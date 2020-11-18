@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CircularMenuComponent implements OnInit {
 
+  public active : boolean = false;
+
   activeClass(){
-    const menu = document.querySelector('.circular__menu');
-    menu.classList.toggle('active');
+    this.active = !this.active;
   }
 
   ngOnInit(): void {
