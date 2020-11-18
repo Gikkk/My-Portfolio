@@ -13,6 +13,9 @@ import { CarouselComponent } from './homepage/carousel/carousel.component';
 import { HeaderComponent } from './universal/header/header.component';
 import { FooterComponent } from './universal/footer/footer.component';
 import { CircularMenuComponent } from './universal/circular-menu/circular-menu.component';
+import { EducationComponent } from './about/education/education.component';
+import { FocusComponent } from './about/focus/focus.component';
+import { LanguageComponent } from './about/language/language.component';
 
 const appRoutes:Routes = [
   {path: "", component: HomepageComponent},
@@ -33,6 +36,9 @@ const appRoutes:Routes = [
     HeaderComponent,
     FooterComponent,
     CircularMenuComponent,
+    EducationComponent,
+    FocusComponent,
+    LanguageComponent,
   ],
   imports: [
     BrowserModule,

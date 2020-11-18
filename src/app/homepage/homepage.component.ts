@@ -70,6 +70,4 @@ export class HomepageComponent implements OnInit{
       document.body.appendChild(css);
     };
   }
-
-
 }

@@ -1,0 +1,57 @@
+.focus{
+  text-align: center;
+  background: $hover-btn;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  .focus__title{
+    color: white;
+    margin: 1rem 0 2rem 0;
+  }
+
+  .focus__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px){
+  .focus{
+    margin: 0 3rem;
+
+    .focus__item{
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (min-width: 1040px){
+  .focus{
+    .focus__title{
+      font-size: 2rem;
+    }
+
+    .focus__img{
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+
+@media (min-width: 1600px){
+  .focus{
+    .focus__title{
+      font-size: 2.5rem;
+    }
+
+    .focus__img{
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+

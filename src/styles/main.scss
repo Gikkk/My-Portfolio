@@ -1,23 +1,32 @@
+// base
 @import './abstracts/variables';
 @import './abstracts/placeholders';
 
+// global
 @import './base/global';
 
-@import './components/button';
+// helpers
 @import './components/carousel.scss';
 @import './components/circular-menu.scss';
-@import './components/slider.scss';
 
+// layout
 @import './layout/header.scss';
 @import './layout/footer.scss';
 
+// pages
 @import './pages/homepage.scss';
-@import './pages/about.scss';
 @import './pages/projects.scss';
 @import './pages/contact.scss';
+@import './pages/about/about.scss';
+// sub components of about page
+@import './pages/about/education.scss';
+@import './pages/about/focus.scss';
+@import './pages/about/language.scss';
 
+// theme
 @import './themes/dark';
 
+// map
 @import "~leaflet/dist/leaflet.css";
 
 
