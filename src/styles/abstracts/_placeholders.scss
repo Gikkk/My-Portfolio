@@ -1,12 +1,14 @@
-// btn placeholder
+
+
+// btn
 %btn{
-  background: linear-gradient(to right, $btn-background 50%, $hover-btn 50%);
-  color: $border;
+  background: linear-gradient(to right, $secondary-background 50%, $hover-background 50%);
+  color: $font-border;
   text-decoration: none;
   font-weight: 700;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  box-shadow: inset 0 0 10px $border;
+  box-shadow: inset 0 0 10px $font-border;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
@@ -20,19 +22,19 @@
 // btn highlighted
 %btn--highlighted{
   margin-right: 1rem;
-  background: linear-gradient(to right, $hover-btn 50%, $btn-background 50%);
+  background: linear-gradient(to right, $hover-background 50%, $secondary-background 50%);
   color: $font-color;
   text-decoration: none;
   font-weight: 700;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  box-shadow: inset 0 0 10px $border;
+  box-shadow: inset 0 0 10px $font-border;
   background-size: 200% 100%;
   background-position: right bottom;
   transition: all 0.5s ease-out;
 
   &:hover{
-    color: $border;
+    color: $font-border;
     background-position: left bottom;
   }
 }

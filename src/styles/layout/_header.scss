@@ -13,7 +13,7 @@
   .logo{
     width: 60px;
     height: 60px;
-    box-shadow: inset 0 0 10px $border;
+    box-shadow: inset 0 0 10px $font-border;
     border-radius: 50%;
   }
 
@@ -28,7 +28,7 @@
 
     .line {
       fill: none;
-      stroke: $btn-background;
+      stroke: $secondary-background;
       stroke-width: 6;
       -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
       stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -91,7 +91,7 @@
         padding-bottom: 0.3rem;
 
         &:hover{
-          border-bottom: 3px solid $border;
+          border-bottom: 3px solid $font-border;
         }
       }
     }
@@ -141,7 +141,7 @@
     height: 45px;
 
     &:hover{
-      background: $btn-background;
+      background: $secondary-background;
       border-radius: 0.8rem;
     }
   }
@@ -171,7 +171,7 @@
 }
 
 .activeNav{
-  color: $border !important;
+  color: $font-border !important;
   border-bottom: 3px solid $font-color;
 }
 

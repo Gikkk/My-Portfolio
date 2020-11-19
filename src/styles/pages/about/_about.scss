@@ -23,7 +23,7 @@
       margin: 0 1rem 1rem 0;
       width: 1rem;
       height: 1rem;
-      background: $btn-background;
+      background: $secondary-background;
       border-radius: 50%;
       cursor: pointer;
     }
@@ -36,7 +36,7 @@
       background: rgb(119, 214, 29);
       width: 1.1rem;
       height: 1.1rem;
-      border: 2px solid $btn-background;
+      border: 2px solid $secondary-background;
     }
 
     .slider__input + * {
@@ -60,7 +60,7 @@
   }
 
   .details{
-    background: $hover-btn;
+    background: $hover-background;
     color: white;
     border-radius: 0.5rem;
     margin: 3rem 1rem;
