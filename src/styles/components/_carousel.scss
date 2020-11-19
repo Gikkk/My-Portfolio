@@ -1,7 +1,5 @@
 .carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-centring;
   flex-direction: column;
   margin: 3rem 0 0 0;
   text-decoration: underline;
@@ -39,11 +37,7 @@
 
     // Individual item
     .carousel__item{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      @extend %position-absolute;
       max-width: 380px;
       max-height: 250px;
       transform-origin: center;

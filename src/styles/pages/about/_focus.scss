@@ -11,10 +11,8 @@
   }
 
   .focus__item{
-    display: flex;
+    @extend %flex-centring;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 }
 

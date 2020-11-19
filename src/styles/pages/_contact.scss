@@ -11,7 +11,7 @@
   }
 
   .contact__text{
-    color: white;
+    color:$font-border;
   }
 
   .box{
@@ -27,14 +27,14 @@
   .box__input{
     background: transparent;
     outline: none;
-    color: white;
+    color:$font-border;
     font-family: $secondary-font;
     border: none;
     border-bottom: 1px solid $background;
     padding: 1rem 0;
 
     &:focus{
-      border-bottom: 1px solid $secondary-background;
+      border-bottom: 2px solid $secondary-background;
     }
   }
 
@@ -46,7 +46,6 @@
     color: $font-border;
     font-weight: 700;
     background: $hover-background;
-    -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
 
     &:hover{
@@ -61,7 +60,7 @@
   }
 
   .box__title{
-    color: white;
+    color: $font-border;
   }
 
   .box__subtitle{
@@ -70,26 +69,24 @@
   }
 
   .box__item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %flex-centring;
     margin: 0.6rem 0 2.8rem 0;
   }
 
   .box__img{
     width: 16px;
     height: 16px;
-    background: white;
+    background: $font-border;
     border-radius: 0.3rem;
   }
 
   .box__text{
-    color: white;
+    color: $font-border;
     margin: 0 0 0 0.5rem
   }
 
   .contact__icon{
-    background: white;
+    background:$font-border;
     border-radius: 0.5rem;
     padding: 0.2rem;
     margin: 1rem 0.2rem;
