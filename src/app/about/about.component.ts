@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit {
   constructor( private title: Title, private meta: Meta) {
   }
 
+  // setting meta tags dynam
   ngOnInit() {
     this.title.setTitle("About - Angular Developer Portfolio");
 

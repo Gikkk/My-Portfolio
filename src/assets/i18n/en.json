@@ -27,7 +27,8 @@
     "msg-text": "Your Message",
     "msg-submit": "submit",
     "msg-err": "The field is empty or not valid!",
-    "msg-succ": "Successfully Submitted"
+    "msg-succ": "Successfully Submitted",
+    "status": "Available"
   },
   "about": {
     "title": "about me",

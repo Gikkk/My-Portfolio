@@ -10,14 +10,15 @@ import { routeTransitionAnimations } from './shared/helpers/route-transition-ani
   animations: [routeTransitionAnimations]
 })
 export class AppComponent implements OnInit{
-  router: any;
 
+  // route animation
   prepareRoute(outlet: RouterOutlet) {
     return outlet &&
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animationState'];
   }
 
+  // multi language
   constructor(translate: TranslateService) {
     translate.setDefaultLang('en');
     translate.use('en');

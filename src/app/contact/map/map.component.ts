@@ -44,6 +44,7 @@ export class MapComponent implements OnInit {
 
   constructor( private renderer: Renderer2) { }
 
+  // my location map
   initMap(){
     this.Telavi = new Feature({
       geometry: new Point(olProj.fromLonLat([45.496760 ,41.909998]))
@@ -80,11 +81,13 @@ export class MapComponent implements OnInit {
     });
   }
 
+  // mouse wheel event - overlay
   onMouseWheel() {
     this.mapZoom = true;
     this.renderer.setStyle(this.mapOver.nativeElement, 'background-color', 'rgba(0, 0, 0, 0.3)');
   }
 
+  // clear overlay on click
   onMouseClick(){
     this.mapZoom = false;
     this.mapOverlay = false;

@@ -12,6 +12,7 @@ export class TechStackComponent implements AfterViewInit, OnDestroy {
   @ViewChild('rotatableEl') rotatableEl: ElementRef;
   @ViewChild('fadeIn') fadeInEl: ElementRef;
 
+  // fade in out element with intersection observer
   options = {
     rootMargin: '0px',
     threshold: 0.5

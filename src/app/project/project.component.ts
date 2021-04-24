@@ -11,7 +11,7 @@ export class ProjectComponent implements OnInit {
 
   constructor( private title: Title, private meta: Meta ) {}
 
-
+  // setting meta tags dynamically
   ngOnInit() {
     this.title.setTitle("Projects - Angular Developer Portfolio");
 

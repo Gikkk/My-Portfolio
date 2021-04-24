@@ -11,6 +11,7 @@ export class CircularMenuComponent implements OnInit {
 
   active = false;
 
+  // menu open/close
   activeClass(){
     this.active = !this.active;
   }

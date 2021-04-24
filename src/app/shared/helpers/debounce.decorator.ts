@@ -1,3 +1,4 @@
+// debouncer of mouse scroll event
 export function debounce(delay: number){
   return function (target: any, propertyKey: string, descriptor: PropertyDescriptor) {
 

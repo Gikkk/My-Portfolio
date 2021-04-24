@@ -1,5 +1,6 @@
 import { transition, trigger, query, style, animate } from '@angular/animations';
 
+// routing animation
 export const routeTransitionAnimations =
   trigger('triggerAnimation', [
     transition('Home <=> About, About <=> Projects, Projects <=> Contact, Home <=> Contact, Home <=> Projects, About <=> Contact', [

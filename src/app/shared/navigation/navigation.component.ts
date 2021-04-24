@@ -22,7 +22,7 @@ export class NavigationComponent implements OnInit {
   @ViewChild("Eng") Eng: ElementRef;
   @ViewChild("Geo") Geo: ElementRef;
 
-
+  // navigation - scroll back
   navbarScroll(){
     setTimeout(() => { window.scrollTo({top: 0, behavior: "smooth"}) }, 300)
   }
@@ -37,6 +37,7 @@ export class NavigationComponent implements OnInit {
     }
   }
 
+  // language change
   langChange(language: string): void {
     this.translate.use(language);
     if(language === 'ge'){

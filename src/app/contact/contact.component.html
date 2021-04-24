@@ -1,6 +1,7 @@
 <section class="contact">
   <h2 class="contact__title" [translate]="'contact.title'" ></h2>
   <h3 class="contact__greet" [translate]="'contact.subtitle'">Write me about anything or just say hello</h3>
+
   <section class="contact__box" #fadeInAnim>
     <article class="form__container">
       <h3 class="form__title" [translate]="'contact.msg-title'">SEND ME A MESSAGE</h3>
@@ -43,6 +44,7 @@
         </div>
       </form>
     </article>
+
     <article class="contact__details">
       <h3 [translate]="'contact.info-title'">CONTACT INFO</h3>
       <h4 [translate]="'contact.info-loc'" class="contact__subtitle">Where to find me</h4>
@@ -62,8 +64,8 @@
       </div>
       <h4 [translate]="'contact.info-status'" class="contact__subtitle">Status</h4>
       <div class="contact__item">
-        <span class="contact__status" #status></span>
-        <p class="contact__text">{{availability}}</p>
+        <span class="contact__status"></span>
+        <p [translate]="'contact.status'" class="contact__text">Available</p>
       </div>
     </article>
   </section>
