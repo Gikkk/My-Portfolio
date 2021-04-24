@@ -14,11 +14,11 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.title.setTitle("About - Angular Developer Portfolio");
 
-    this.meta.updateTag({ name: 'og:title', content: 'About - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'og:title', content: 'About - | Developer portfolio' });
     this.meta.updateTag({ name: 'description', content: 'About page of front end developer portfolio - personal info, CV' });
-    this.meta.updateTag({ name: 'og:url', content: '/about' });
+    this.meta.updateTag({ name: 'og:url', content: 'https://giorgi-portfolio.web.app/about' });
 
-    this.meta.updateTag({ name: 'twitter:title', content: 'About - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'About - Developer portfolio' });
     this.meta.updateTag({ name: 'twitter:description', content: 'About page of front end developer portfolio - personal info, CV' });
   }
 }

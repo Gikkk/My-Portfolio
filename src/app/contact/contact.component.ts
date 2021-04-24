@@ -44,11 +44,11 @@ export class ContactComponent implements OnInit, AfterViewInit, OnDestroy {
     }, 3600000);
 
     this.title.setTitle("Contact - Angular Developer Portfolio");
-    this.meta.updateTag({ name: 'og:title', content: 'Contact - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'og:title', content: 'Contact - Developer portfolio' });
     this.meta.updateTag({ name: 'description', content: 'Contact page of front end developer portfolio - contact information' });
-    this.meta.updateTag({ name: 'og:url', content: '/contact' });
+    this.meta.updateTag({ name: 'og:url', content: 'https://giorgi-portfolio.web.app/contact' });
 
-    this.meta.updateTag({ name: 'twitter:title', content: 'Contact - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:title', content: 'Contact - Developer portfolio' });
     this.meta.updateTag({ name: 'twitter:description', content: 'Contact page of front end developer portfolio - contact information' });
   }
 

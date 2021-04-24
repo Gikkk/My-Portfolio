@@ -32,20 +32,20 @@
       <article>
         <ul class="mobnav__list" >
           <li routerLink="/home" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/homepage.png" alt="homepage icon" loading="lazy">
+            <img src="assets/mob-nav/homepage.png" alt="homepage icon" >
             <a class="mobnav__item" [translate]="'nav.home'" [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='navbar__active'>Home</a>
           </li>
           <li routerLink="/about" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
+            <img src="assets/mob-nav/settings.png" alt="skills icon" >
             <a class="mobnav__item" [translate]="'nav.about'" routerLinkActive='navbar__active'> About</a>
           </li>
           <div class="mobnav__line--middle"></div>
           <li routerLink="/projects" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
+            <img src="assets/mob-nav/aim.png" alt="focus icon" >
             <a class="mobnav__item" [translate]="'nav.projects'" routerLinkActive='navbar__active'>Works</a>
           </li>
           <li routerLink="/contact" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/question.png" alt="who icon" loading="lazy">
+            <img src="assets/mob-nav/question.png" alt="who icon" >
             <a class="mobnav__item" [translate]="'nav.contact'" routerLinkActive='navbar__active'>Reach</a>
           </li>
         </ul>
