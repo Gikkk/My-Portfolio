@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { CircularMenuComponent } from './shared/circular-menu/circular-menu.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,7 +37,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
