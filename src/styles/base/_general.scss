@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+}
+
+html {
+  position: relative;
+  min-height: 100vh;
+}
+
+body{
+  margin: 0;
+  font-family: $primary-font;
+  padding-bottom: 120px;
+  overflow: auto;
+}
+

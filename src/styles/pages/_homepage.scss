@@ -1,102 +1,63 @@
-.intro{
-  display: grid;
-  justify-content: center;
-  text-align: center;
-  animation: showIn 4s forwards;
-  font-family: $secondary-font;
-  margin: 8rem 1rem 0 1rem;
+.particles{
+  position: relative;
+  background: url('../../assets/general/background-day.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover
+}
 
-  .intro__greet{
-    margin: 0;
-    color: $font-color;
-  }
+.particles__svg{
+  position: absolute;
+  width: 100%;
+  fill: $primary-color;
+  height: 40px;
+  bottom: -1px;
+}
 
-  .intro__name{
-    margin: 0;
-    color: $font-color;
-  }
+.homepage__title{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .intro__name--highlighted{
-    animation: colorChange 20s infinite alternate;
-  }
+.homepage__subtitle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  .intro__dev{
-    margin-top: 0;
-    color: $background;
-    animation: colorChange 20s infinite alternate;
-  }
+.homepage__subtitle--img{
+  height: 40px;
+  width: 160px;
 
-  .intro__btn{
-    @extend %btn;
-  }
-
-  .intro__btn--highlighted{
-    @extend %btn--highlighted;
+  g{
+    fill: $tertiary-color;
   }
 }
 
-@keyframes colorChange {
-  0% {
-
-    color: rgb(48, 48, 138);
+@media(min-width: 640px){
+  .homepage__title--img{
+    height: 80px;
+    width: 300px;
   }
 
-  10% {
-
-    color: #803b9e;
-  }
-
-  20% {
-
-    color: #22b99b;
-  }
-
-  30% {
-
-    color: #ca6623;
-  }
-
-  40% {
-
-    color: rgb(135, 135, 168);
-  }
-
-  50% {
-
-    color: #34495e;
-  }
-
-  60% {
-
-    color: rgb(68, 150, 99);
-  }
-
-  70% {
-
-    color: #2980b9;
-  }
-  80% {
-
-    color: #1f1c0f;
-  }
-
-  90% {
-
-    color: #769eb8;
-  }
-
-  100% {
-
-    color: rgb(189, 152, 158);
+  .homepage__subtitle--img{
+    height: 60px;
+    width: 200px;
   }
 }
 
-@keyframes showIn {
-  0% {
-      opacity: 0;
+
+@media (min-width: 1024px){
+  .homepage__title--img{
+    height: 90px;
+    width: 420px;
   }
-  100% {
-      opacity: 1;
+
+  .homepage__subtitle--img{
+    height: 65px;
+    width: 250px;
   }
 }
-

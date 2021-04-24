@@ -1,0 +1,66 @@
+<header>
+  <nav class="navbar" #navbar>
+    <!-- desktop navbar  -->
+    <section class="navbar__desktop">
+      <ul class="navbar__list">
+        <li><a (click)="navbarScroll()" class="navbar__item"  [translate]="'nav.home'"  [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Home</a></li>
+        <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.about'"  routerLink="/about" routerLinkActive='navbar__active' >About</a></li>
+      </ul>
+      <a>
+        <img class="navbar__logo" src="assets/general/logo.png" alt="logo" routerLink="/">
+      </a>
+      <ul class="navbar__list">
+        <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.projects'"  routerLink="/projects" routerLinkActive='navbar__active' >Work</a></li>
+        <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.contact'" routerLink="/contact" routerLinkActive='navbar__active' >Reach </a></li>
+      </ul>
+    </section>
+    <!-- language bar  -->
+    <section class="navbar__language">
+      <img src="assets/language/geo.png" alt="geo flag" (click)="langChange('ge')" *ngIf="!langFlag" [@inOutAnimation]>
+      <img src="assets/language/usa.png" alt="usa flag" (click)="langChange('en')" *ngIf="langFlag" [@inOutAnimation]>
+    </section>
+
+    <!-- hamburger menu icon -->
+    <section class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
+      <div class="hamburger__line hamburger__line--half hamburger__line--start"></div>
+      <div class="hamburger__line"></div>
+      <div class="hamburger__line hamburger__line--half hamburger__line--end"></div>
+    </section>
+
+    <!-- mobile navbar -->
+    <section class="mobnav" [ngClass]="{'visible' : active}">
+      <article>
+        <ul class="mobnav__list" >
+          <li routerLink="/home" (click)="activeClass()" (click)="navbarScroll()">
+            <img src="assets/mob-nav/homepage.png" alt="homepage icon" loading="lazy">
+            <a class="mobnav__item" [translate]="'nav.home'" [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='navbar__active'>Home</a>
+          </li>
+          <li routerLink="/about" (click)="activeClass()" (click)="navbarScroll()">
+            <img src="assets/mob-nav/settings.png" alt="skills icon" loading="lazy">
+            <a class="mobnav__item" [translate]="'nav.about'" routerLinkActive='navbar__active'> About</a>
+          </li>
+          <div class="mobnav__line--middle"></div>
+          <li routerLink="/projects" (click)="activeClass()" (click)="navbarScroll()">
+            <img src="assets/mob-nav/aim.png" alt="focus icon" loading="lazy">
+            <a class="mobnav__item" [translate]="'nav.projects'" routerLinkActive='navbar__active'>Works</a>
+          </li>
+          <li routerLink="/contact" (click)="activeClass()" (click)="navbarScroll()">
+            <img src="assets/mob-nav/question.png" alt="who icon" loading="lazy">
+            <a class="mobnav__item" [translate]="'nav.contact'" routerLinkActive='navbar__active'>Reach</a>
+          </li>
+        </ul>
+      </article>
+      <div class="mobnav__line"></div>
+      <div class="mobnav__line"></div>
+      <article>
+        <h4 [translate]="'nav.language'">Language</h4>
+        <div>
+          <button class=" mobnav__btn mobnav__btn--active" (click)="langChange('en')" #Eng>English</button>
+          <button class="mobnav__btn" (click)="langChange('ge')" #Geo>ქართული</button>
+        </div>
+      </article>
+    </section>
+
+  </nav>
+  <div class="mobnav__space" (click)="activeClass()" [ngClass]="{'mobnav__space--active' : active}"></div>
+</header>

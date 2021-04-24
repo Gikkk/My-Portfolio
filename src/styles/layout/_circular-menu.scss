@@ -1,0 +1,123 @@
+.circular__menu {
+  position: fixed;
+  bottom: 48%;
+  left: -0.6rem;
+  z-index: 3;
+
+  .circular__btn {
+    display: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: $tertiary-color;
+    cursor: pointer;
+  }
+
+  .circular__icon{
+    transition: transform .2s;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -2;
+    background: $tertiary-color;
+    transition: all .3s ease;
+  }
+
+  .menu__list {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    @extend %flex-centring;
+    text-decoration: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: hsla(0,0%,0%,.4);
+    transition: transform .3s ease, background .2s ease;
+
+    svg{
+      fill: $primary-color;
+      height: 35px;
+      width: 35px;
+    }
+
+    &:hover {
+      &:nth-child(1){
+        background: #4267B2;
+      }
+      &:nth-child(2){
+        background: rgb(64, 120, 192);
+      }
+      &:nth-child(3){
+        background: linear-gradient(#EB4335, #FBBC05, #34A853, #4285F4);
+      }
+      &:nth-child(4){
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+      }
+    }
+  }
+}
+
+.circular__btn--active {
+  .circular__btn {
+    box-shadow: inset 0 0 10px $primary-color;
+  }
+
+  .circular__icon{
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    transform: scale3d(5.5, 5.5, 1);
+    transition-timing-function: cubic-bezier(.68, 1.55, .265, 1);
+  }
+
+  .menu-item {
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .menu-item:nth-child(1) {
+    transform: translate3d(1rem,-5.9rem,0);
+  }
+
+  .menu-item:nth-child(2) {
+    transform: translate3d(5.3rem,-3rem,0);
+  }
+
+  .menu-item:nth-child(3) {
+    transform: translate3d(5.5rem, 2.5rem,0);
+  }
+
+  .menu-item:nth-child(4) {
+    transform: translate3d(1.5rem, 6.2rem,0);
+  }
+}
+
+@media (min-width: 640px) {
+  .circular__menu {
+    .circular__btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu__list {
+      display: block;
+    }
+  }
+}

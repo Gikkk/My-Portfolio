@@ -1,41 +1,75 @@
-<div class="contact">
-  <h3 class="contact__title">Contact Me</h3>
-  <h2 class="contact__text">Write me about anything or just say hello</h2>
-  <div class="contact__box">
-    <div class="box">
-      <h3 class="box__title">SEND US A MESSAGE</h3>
-      <form class="box__form">
-        <input type="text" placeholder="Your Name" class="box__input" required>
-        <input type="email"  placeholder="Your Email" class="box__input" required>
-        <input type="text"  placeholder="Subject" class="box__input" required>
-        <textarea cols="20" rows="8" placeholder="Your Message" class="box__input"></textarea>
-        <button type="submit" class="submit__btn">Submit</button>
+<section class="contact">
+  <h2 class="contact__title" [translate]="'contact.title'" ></h2>
+  <h3 class="contact__greet" [translate]="'contact.subtitle'">Write me about anything or just say hello</h3>
+  <section class="contact__box" #fadeInAnim>
+    <article class="form__container">
+      <h3 class="form__title" [translate]="'contact.msg-title'">SEND ME A MESSAGE</h3>
+      <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="form__item">
+          <label for="name" class="form__label" [translate]="'contact.msg-name'">Your Name</label>
+          <input id="name" formControlName="name" type="text" class="form__input">
+          <span class="form__error" [translate]="'contact.msg-err'"
+          *ngIf="!signUpForm.get('name').valid && signUpForm.get('name').touched"
+          >The Name field is empty or not valid!</span>
+        </div>
+
+        <div class="form__item">
+          <label for="email" class="form__label" [translate]="'contact.msg-email'">Your Email</label>
+          <input id="email" formControlName="email" type="text" class="form__input">
+          <span class="form__error" [translate]="'contact.msg-err'"
+          *ngIf="!signUpForm.get('email').valid && signUpForm.get('email').touched"
+          >The Email field is empty or not valid!</span>
+        </div>
+
+        <div class="form__item">
+          <label for="subject" class="form__label" [translate]="'contact.msg-subject'">Subject</label>
+          <input id="subject" formControlName="subject" type="text" class="form__input" >
+          <span class="form__error" [translate]="'contact.msg-err'"
+          *ngIf="!signUpForm.get('subject').valid && signUpForm.get('subject').touched"
+          >The Subject field is empty or not valid!</span>
+        </div>
+
+        <div class="form__item">
+          <label for="message" class="form__label" [translate]="'contact.msg-text'">Message</label>
+          <textarea id="message" formControlName="message" rows="4" class="form__textarea" placeholder="e.g. I'd like to talk about..."></textarea>
+          <span class="form__error" [translate]="'contact.msg-err'"
+          *ngIf="!signUpForm.get('message').valid && signUpForm.get('message').touched"
+          >The Message field is empty or not valid!</span>
+        </div>
+
+        <div class="form__item">
+          <button type="submit" class="submit__btn" [disabled]="!signUpForm.valid" [ngClass]="{'submit__btn--valid':signUpForm.valid}" [translate]="'contact.msg-submit'">Submit</button>
+          <span *ngIf="submitted" class="form__success" [translate]="'contact.msg-succ'">Successfully Submitted</span>
+        </div>
       </form>
-    </div>
-    <div class="box__details">
-      <h3 class="box__title">CONTACT INFO</h3>
-      <h4 class="box__subtitle">Where to Find Me</h4>
-      <div class="box__item">
-        <img src="../../assets/icons/home.svg" alt="home" class="box__img">
-        <p class="box__text">Telavi, Kakheti, Georgia</p>
+    </article>
+    <article class="contact__details">
+      <h3 [translate]="'contact.info-title'">CONTACT INFO</h3>
+      <h4 [translate]="'contact.info-loc'" class="contact__subtitle">Where to find me</h4>
+      <div class="contact__item">
+        <img src="assets/contact/home.svg" alt="home" class="box__img" loading="lazy">
+        <p [translate]="'contact.info-telavi'" class="contact__text">Telavi, Kakheti</p>
       </div>
-      <h4 class="box__subtitle">Email Me At</h4>
-      <div class="box__item">
-        <img src="../../assets/icons/email.svg" alt="email" class="box__img">
-        <p class="box__text">giorgizhonzholadze1996@gmail.com</p>
+      <h4 [translate]="'contact.info-email'" class="contact__subtitle">Email me at</h4>
+      <div class="contact__item">
+        <img src="assets/contact/email.svg" alt="email" class="box__img" loading="lazy">
+        <p class="contact__text">giorgizhonzholadze1996@gmail.com</p>
       </div>
-      <h4 class="box__subtitle">Call Me At</h4>
-      <div class="box__item">
-        <img src="../../assets/icons/smartphone.svg" alt="phone" class="box__img">
-        <p class="box__text">595 33 34 39</p>
+      <h4 [translate]="'contact.info-phone'" class="contact__subtitle">Call me at</h4>
+      <div class="contact__item">
+        <img src="assets/contact/smartphone.svg" alt="phone" class="box__img" loading="lazy">
+        <a href="tel:+4917640206387" class="contact__text">595 33 34 39</a>
       </div>
-      <div>
-        <h4 class="box__subtitle">Stay Connected</h4>
-        <a href="https://www.facebook.com/zhonzholadze/" target="_blank"><img src="../../assets/icons/iconmonstr-facebook-3.svg" alt="facebook" class="contact__icon"></a>
-        <a href="https://github.com/Gikkk" target="_blank"><img src="../../assets/icons/iconmonstr-github-3.svg" alt="GitHub" class="contact__icon"></a>
-        <a href="https://www.instagram.com/giorgizhonzholadze/" target="_blank"><img src="../../assets/icons/iconmonstr-instagram-11.svg" alt="Instagram" class="contact__icon"></a>
+      <h4 [translate]="'contact.info-status'" class="contact__subtitle">Status</h4>
+      <div class="contact__item">
+        <span class="contact__status" #status></span>
+        <p class="contact__text">{{availability}}</p>
       </div>
-    </div>
-  </div>
+    </article>
+  </section>
+
+  <!-- map section  -->
   <app-map></app-map>
-</div>
+</section>
+
+

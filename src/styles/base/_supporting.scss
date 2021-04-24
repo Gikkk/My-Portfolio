@@ -1,0 +1,32 @@
+.fadeInAnim{
+  animation: 1s both fadeInContent;
+}
+
+.fadeInAnimLeft{
+  animation: 1s both fadeInContentLeft;
+}
+
+.fadeInAnimRight{
+  animation: 1s both fadeInContentRight;
+}
+
+@keyframes fadeInContent {
+  from {
+      transform: translateY(25%);
+  }
+  to { opacity: 1 }
+}
+
+@keyframes fadeInContentRight {
+  from {
+      transform: translateX(25%);
+  }
+  to { opacity: 1 }
+}
+
+@keyframes fadeInContentLeft{
+  from {
+      transform: translateX(-25%);
+  }
+  to { opacity: 1 }
+}

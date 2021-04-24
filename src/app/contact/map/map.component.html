@@ -1,1 +1,8 @@
-<div id="map"></div>
+<section>
+  <div id="map">
+    <div class="map__overlay" (wheel)="onMouseWheel()" *ngIf="mapOverlay" (click)="onMouseClick()" #mapOverlay></div>
+    <div class="map__overlay--text" *ngIf="mapZoom" (click)="onMouseClick()" [@enterAnimation]>
+      <p [translate]="'contact.map'" >Click on the map to zoom in/out...</p>
+    </div>
+  </div>
+</section>

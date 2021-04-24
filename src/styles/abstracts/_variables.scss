@@ -1,14 +1,18 @@
-/*=================== fonts ====================*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700,900|Rubik:300,400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
 /*font Variables*/
-$primary-font: 'Poppins', sans-serif;
-$secondary-font: 'Rubik', sans-serif;
+$primary-font: 'Playfair Display', serif;
+$secondary-font: 'Akaya Telivigala', cursive;
+
 
 /*Color Variables*/
-$font-color: hsl(273, 48%, 8%);
-$background: #8b7d7dbb;
-$secondary-background: hsl(258, 46%, 49%);
-$hover-background: hsla(0, 0%, 0%, .6);
-$font-border: rgb(223, 217, 217);
+$primary-color: white;
+$secondary-color: black;
+$tertiary-color: #252934;
+
+$primary-color--light: rgba(245, 238, 238, 0.8);
+$secondary-color--light: hsla(0, 0%, 0%, .6);
+$tertiary-color--light: #4b6cc1;
 

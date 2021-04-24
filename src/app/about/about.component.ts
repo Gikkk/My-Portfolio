@@ -1,4 +1,5 @@
-import { Component, Renderer2, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -7,12 +8,17 @@ import { Component, Renderer2, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor(private renderer: Renderer2) {
-    this.renderer.setStyle(document.body, 'margin-bottom', "60px");
+  constructor( private title: Title, private meta: Meta) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.title.setTitle("About - Angular Developer Portfolio");
 
+    this.meta.updateTag({ name: 'og:title', content: 'About - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'description', content: 'About page of front end developer portfolio - personal info, CV' });
+    this.meta.updateTag({ name: 'og:url', content: '/about' });
+
+    this.meta.updateTag({ name: 'twitter:title', content: 'About - Giorgi Zhonzholadze | Developer portfolio' });
+    this.meta.updateTag({ name: 'twitter:description', content: 'About page of front end developer portfolio - personal info, CV' });
   }
-
 }

@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'app-focus',
   templateUrl: './focus.component.html',
   styleUrls: ['./focus.component.scss']
 })
-export class FocusComponent implements OnInit {
+export class FocusComponent implements AfterViewInit{
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit() {
   }
-
 }

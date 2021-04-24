@@ -1,0 +1,126 @@
+.form{
+  display: flex;
+  flex-direction: column;
+
+  .form__item{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .form__error{
+    color: rgb(207, 80, 80);
+    font-family: $secondary-font;
+    border: 1px solid rgb(207, 80, 80);
+    font-size: 12px;
+    font-weight: 600;
+    position: absolute;
+    background: $primary-color;
+    padding: 0.2rem;
+    border-radius: 2px;
+    top: 100%;
+  }
+
+  .form__success{
+    border: 1px solid $tertiary-color--light;
+    color: $tertiary-color--light;
+    font-family: $secondary-font;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    padding: 6px 10px;
+    width: 100%;
+    top: 100%;
+    box-shadow: inset 0 0 10px $tertiary-color--light;
+  }
+
+  .form__label{
+    color: $secondary-color--light;
+    font-weight: 600;
+  }
+
+  .form__input{
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $tertiary-color;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    color: $tertiary-color;
+
+    &:focus{
+      border-bottom: 1px solid #4b6cc1;
+    }
+  }
+
+  .form__textarea{
+    resize: vertical;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $tertiary-color;
+    text-align: center;
+    padding: 1rem;
+    font-size: 14px;
+    color: $tertiary-color;
+  }
+
+  .ng-invalid.ng-touched,
+  .ng-invalid.ng-touched{
+    border-bottom: 1px solid rgb(207, 80, 80);
+  }
+
+  .ng-valid.ng-touched,
+  .ng-valid.ng-touched,
+  .ng-valid.ng-untouched{
+    border-bottom: 1px solid #4b6cc1;
+  }
+
+  .form__input:-webkit-autofill,
+  .form__input:-webkit-autofill:hover,
+  .form__input:-webkit-autofill:focus,
+  .form__inputt:-webkit-autofill:active  {
+    transition: background-color 5000s;
+    -webkit-text-fill-color: $tertiary-color;
+  }
+
+  .submit__btn{
+    border-radius: .5rem;
+    margin-top: 10px;
+    box-shadow: inset 0 0 10px $secondary-color--light;
+    color: $secondary-color--light;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    background: $primary-color--light;
+    transition: all .5s ease-out;
+    padding: 0.8rem 0;
+    border: hidden;
+  }
+
+  .submit__btn--valid{
+    box-shadow: inset 0 0 10px $secondary-color;
+    color: $secondary-color;
+
+    &:hover{
+      box-shadow: inset 0 0 10px $tertiary-color--light;
+      color: $tertiary-color--light;
+    }
+  }
+}
+
+@media (min-width: 640px){
+  .form{
+    .form__input{
+      text-align: left;
+    }
+
+    .form__textarea{
+      text-align: left;
+    }
+  }
+}

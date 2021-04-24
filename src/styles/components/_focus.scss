@@ -1,0 +1,98 @@
+.focus{
+  text-align: center;
+  justify-content: center;
+  background: $primary-color--light;
+  border-radius: 0.5rem;
+  margin: 3rem 1rem 100px 1rem;
+  padding: 1rem 1rem 3rem 1rem;
+  box-shadow: inset 0 0 10px $secondary-color;
+  max-width: 1500px;
+
+  .focus__title{
+    color: $tertiary-color;
+    font-size: 2rem;
+    font-style: italic
+  }
+
+  .focus__item{
+    @extend %flex-centring;
+    flex-direction: column;
+  }
+
+  .focus__img{
+    width: 200px;
+    height: 200px;
+  }
+
+  .focus__img:hover{
+    animation: bounce 1s;
+    position: relative;
+  }
+
+  @keyframes bounce {
+    0% {
+      top: 0;
+      animation-timing-function: ease-out;
+    }
+    17% {
+      top: -15px;
+      animation-timing-function: ease-in;
+    }
+    34% {
+      top: 0;
+      animation-timing-function: ease-out;
+    }
+    51% {
+      top: -8px;
+      animation-timing-function: ease-in;
+    }
+    68% {
+      top: 0px;
+       }
+    85% {
+      top: -3px;
+      animation-timing-function: ease-in;
+    }
+    100% {
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: 640px){
+  .focus{
+    margin: 3rem 3rem;
+
+    .focus__item{
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (min-width: 1024px){
+  .focus{
+    margin: 3rem 5rem;
+
+    .focus__img{
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+
+@media (min-width: 1660px){
+  .focus{
+    margin-right: auto;
+    margin-left: auto;
+
+    .focus__title{
+      font-size: 2.5rem;
+    }
+
+    .focus__img{
+      width: 450px;
+      height: 450px;
+    }
+  }
+}

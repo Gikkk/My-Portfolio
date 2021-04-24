@@ -1,46 +1,36 @@
-<div class="info">
-  <div class="slider">
-    <div class="slider__wrapper">
-      <input type="radio" name="image-slide" checked="checked" class="slider__input">
-      <img src="../../assets/slider/profilpicture.jpg" alt="mypic">
-      <input type="radio" name="image-slide" class="slider__input">
-      <img src="../../assets/slider/pic.jpg" alt="mypic">
-      <input type="radio" name="image-slide" class="slider__input">
-      <img src="../../assets/slider/mypic.jpeg" alt="mypic">
-    </div>
-  </div>
-  <div class="details">
-    <h2 class="details__title">About Me</h2>
-    <p class="details__text"> I am self-taught front-end developer. In addition to my knowledge base, I actively seek everyday
-      to develop more. I can say that everything what I know about programming is the result of my hard
-      work. <br>
-      Currently my goal is to become more proficient in this field and forge my career as front-end .developer
-    </p>
-    <div class="details__info">
+<h2 class="about__title" [translate]="'about.title'">About Me</h2>
+<section class="about">
+  <article class="about__details">
+    <h3 [translate]="'about.subtitle'" class="about__subtitle">SUMMARY</h3>
+    <p class="about__text" [translate]="'about.text'">I am self-taught front-end developer. In addition to my knowledge base, I actively seek everyday to develop more. I can say that everything what I know about programming is the result of my hard work.</p>
+    <p class="about__text" [translate]="'about.text2'">Currently my goal is to become more proficient in this field and forge my career as front-end developer.</p>
+    <div class="about__info">
       <div>
-        <p>Name:</p>
-        <p>Surname:</p>
-        <p>Date of birth:</p>
-        <p>Address:</p>
-        <p>Phone:</p>
+        <p [translate]="'about.name'">Name:</p>
+        <p [translate]="'about.surname'">Surname:</p>
+        <p [translate]="'about.birth'">Date of birth:</p>
+        <p [translate]="'about.address'">Address:</p>
       </div>
       <div>
-        <p class="details__info--highlighted">Giorgi</p>
-        <p class="details__info--highlighted">Zhonzholadze</p>
-        <p class="details__info--highlighted">July 15, 1996</p>
-        <p class="details__info--highlighted">Telavi, Georgia</p>
-        <p class="details__info--highlighted">595 33 34 39</p>
+        <p [translate]="'about.name-field'" class="about__info--highlighted">Giorgi</p>
+        <p [translate]="'about.surname-field'" class="about__info--highlighted">Zhonzholadze</p>
+        <p [translate]="'about.birth-field'" class="about__info--highlighted">July 15, 1996</p>
+        <p [translate]="'about.address-field'" class="about__info--highlighted">Telavi, Kakheti</p>
       </div>
     </div>
-  </div>
-</div>
-<!-- education component  -->
-<app-education></app-education>
+  </article>
 
-<!-- focus  -->
+  <!-- card component -->
+  <div class="cards">
+    <app-card></app-card>
+  </div>
+
+</section>
+<section class="CV">
+  <h3 class="CV__title" [translate]="'about.more'">For more information</h3>
+  <a download href="assets/CV/Giorgi_Zhonzholadze - En.pdf" type="application/pdf" class="CV__btn" [translate]="'about.CV'">download CV</a>
+</section>
+
+<!-- focus componenet -->
 <app-focus></app-focus>
-
-<!-- language comp  -->
-<app-language></app-language>
-
 

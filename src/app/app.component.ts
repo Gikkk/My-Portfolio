@@ -1,21 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
+import {  RouterOutlet } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { routeTransitionAnimations } from './shared/helpers/route-transition-animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [routeTransitionAnimations]
 })
 export class AppComponent implements OnInit{
+  router: any;
 
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-    this.router.events.subscribe((evt) => {
-        if (!(evt instanceof NavigationEnd)) {
-            return;
-        }
-        window.scrollTo(0, 0);
-    });
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData['animationState'];
   }
+
+  constructor(translate: TranslateService) {
+    translate.setDefaultLang('en');
+    translate.use('en');
+  }
+
+  ngOnInit() {}
 }

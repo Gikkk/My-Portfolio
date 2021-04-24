@@ -1,49 +1,41 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule, HttpClient} from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
-import { ProjectsComponent} from './projects/projects.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { MapComponent } from './contact/map/map.component';
-import { CarouselComponent } from './homepage/carousel/carousel.component';
-import { HeaderComponent } from './universal/header/header.component';
-import { FooterComponent } from './universal/footer/footer.component';
-import { CircularMenuComponent } from './universal/circular-menu/circular-menu.component';
-import { EducationComponent } from './about/education/education.component';
-import { FocusComponent } from './about/focus/focus.component';
-import { LanguageComponent } from './about/language/language.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { CircularMenuComponent } from './shared/circular-menu/circular-menu.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
-const appRoutes:Routes = [
-  {path: "", component: HomepageComponent},
-  {path: "about", component: AboutComponent},
-  {path: "projects", component: ProjectsComponent},
-  {path: "contact", component: ContactComponent}
-]
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProjectsComponent,
-    AboutComponent,
-    ContactComponent,
-    HomepageComponent,
-    MapComponent,
-    CarouselComponent,
-    HeaderComponent,
-    FooterComponent,
+    NavigationComponent,
     CircularMenuComponent,
-    EducationComponent,
-    FocusComponent,
-    LanguageComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]

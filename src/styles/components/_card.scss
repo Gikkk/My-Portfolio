@@ -1,0 +1,121 @@
+.language{
+  @extend %flex-centring;
+
+  &__card {
+    height: 250px;
+    width: 110px;
+    background: $primary-color;
+    border-radius: 10px;
+    box-shadow: -0.5rem 0 1.5rem $secondary-color;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+  }
+
+  &__card:not(:first-child) {
+      margin-left: -30px;
+  }
+
+  &__card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+
+  &__card:hover ~ &__card {
+    position: relative;
+    left: 25px;
+  }
+
+  &__card:hover:nth-child(1) &__filledbar {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 65%, rgb(35, 172, 1) 100%);
+  }
+
+  &__card:hover:nth-child(2) &__filledbar {
+    width: 85%;
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 80%, rgb(105, 185, 85) 100%);
+  }
+
+  &__card:hover:nth-child(3) &__filledbar {
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 100%);
+    width: 50%;
+  }
+
+  &__title {
+    color: $secondary-color;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 65%;
+  }
+
+  &__emptybar {
+    background: $tertiary-color;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__filledbar {
+    position: absolute;
+    top: 0px;
+    width: 0px;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(212, 49, 27) 0%, rgb(169, 177, 58) 80%, rgb(113, 224, 85) 100%);
+    transition: 0.6s ease-out;
+  }
+
+  &__flag{
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    transition: 0.4s ease-out;
+  }
+}
+
+@media( min-width: 410px){
+  .language{
+    width: 400px;
+
+    &__card {
+      height: 280px;
+      width: 30%;
+    }
+  }
+}
+
+@media( min-width: 640px){
+  .language{
+    width: 600px;
+
+    &__card {
+      height: 300px;
+      width: 30%;
+    }
+
+    &__bar {
+      width: 75%;
+    }
+  }
+}
+
+@media( min-width: 1024px){
+  .language{
+    width: 490px;
+  }
+}
+
+@media( min-width: 1440px){
+  .language{
+    width: 690px;
+  }
+}
