@@ -84,16 +84,12 @@
   }
 
   .mobnav__line{
-    width: 90%;
-    height: 1px;
-    background: #e4d9d9;
+    @extend %mobnav--line;
     margin-bottom: 1rem
   }
 
   .mobnav__line--middle{
-    width: 90%;
-    height: 1px;
-    background: #e4d9d9;
+    @extend %mobnav--line;
   }
 
   .mobnav__btn{
@@ -113,11 +109,6 @@
 }
 
 // support
-.navbar__sticky{
-  padding: 0.2rem 1rem;
-  background: $primary-color;
-  box-shadow: inset 0 0 10px $secondary-color;
-}
 
 .navbar__active{
   opacity: 0.8;
@@ -159,27 +150,19 @@
 
     .navbar__language{
       display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
       right: 16px;
       height: 24px;
       width: 30px;
       background: $secondary-color--light;
-      justify-content: center;
-      align-items: center;
       transition: 0.3s;
       border-radius: 2px;
 
       &:hover{
         box-shadow: inset 0 0 3px $primary-color;
       }
-    }
-  }
-
-  .navbar__sticky{
-    padding: 0.2rem 0;
-
-    .navbar__item{
-      color: $secondary-color;
     }
   }
 }
