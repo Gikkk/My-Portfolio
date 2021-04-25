@@ -9,7 +9,7 @@
   align-items: center;
   transition: 0.15s;
   padding: 1rem 1rem 0 1rem;
-  z-index: 100;
+  z-index: 4;
   text-transform: uppercase;
 
   .navbar__desktop{
@@ -95,7 +95,7 @@
     background: unset;
     opacity: 0.5;
     padding: 0;
-    margin: 0 0.5rem 0 0;
+    margin: 0.5rem 0.5rem 0 0;
     outline: none;
   }
 
@@ -123,7 +123,7 @@
 }
 
 .mobnav__space{
-  z-index: 3;
+  z-index: 5;
   background: $secondary-color;
   opacity: 0.5;
   width: 30%;

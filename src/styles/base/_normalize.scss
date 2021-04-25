@@ -6,6 +6,39 @@ img:focus,a:focus,li:focus {
   outline: none;
 }
 
+// Remove the gray background on active links in IE 10.
 a{
   text-decoration: none;
+  background-color: transparent;
 }
+
+// Render the `main` element consistently in IE.
+main {
+  display: block;
+}
+// Remove the border on images inside links in IE 10.
+img {
+  border-style: none;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+// Change the font styles in all browsers.
+// Remove the margin in Firefox and Safari.
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+// Correct the inability to style clickable types in iOS and Safar
+button[type="button"]{
+  -webkit-appearance: button;
+}
+

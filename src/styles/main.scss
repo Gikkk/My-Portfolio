@@ -7,11 +7,6 @@
 @import "./base/normalize";
 @import "./base/supporting";
 
-@import "./pages/homepage";
-@import "./pages/about";
-@import "./pages/projects";
-@import "./pages/contact";
-
 @import "./components/carousel";
 @import "./components/hamburger";
 @import "./components/card";
@@ -22,3 +17,8 @@
 @import "./layout/forms";
 @import "./layout/circular-menu";
 @import "./layout/footer";
+
+@import "./pages/homepage";
+@import "./pages/about";
+@import "./pages/projects";
+@import "./pages/contact";
