@@ -7,12 +7,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 0.3s;
-  z-index: 3;
+  transition: 0.15s;
+  padding: 1rem 1rem 0 1rem;
+  z-index: 100;
   text-transform: uppercase;
-  padding: 0.2rem 1rem;
-  background: $primary-color;
-  box-shadow: inset 0 0 10px $secondary-color;
 
   .navbar__desktop{
     display: flex;
@@ -109,13 +107,18 @@
 }
 
 // support
+.navbar__sticky{
+  padding: 0.2rem 1rem;
+  background: $primary-color;
+  box-shadow: inset 0 0 10px $secondary-color;
+}
 
 .navbar__active{
   opacity: 0.8;
   text-shadow: 0px -1px 0px $secondary-color--light, 0 0 5px rgb(95, 92, 92),0 -4px 5px rgb(95, 92, 92);
 }
 
-.visible{
+.mobnav__active{
   transform: translateX(0vw);
 }
 

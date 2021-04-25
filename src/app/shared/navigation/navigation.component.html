@@ -28,7 +28,7 @@
     </section>
 
     <!-- mobile navbar -->
-    <section class="mobnav" [ngClass]="{'visible' : active}">
+    <section class="mobnav" [ngClass]="{'mobnav__active' : active}">
       <article>
         <ul class="mobnav__list" >
           <li routerLink="/home" (click)="activeClass()" (click)="navbarScroll()">

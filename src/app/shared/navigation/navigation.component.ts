@@ -1,7 +1,8 @@
-import { Component, ViewChild, ElementRef, Renderer2, OnInit, Inject } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2, OnInit, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
 import {fadeInAnimation} from '../helpers/fadeInAnimation';
+import { debounce} from '../helpers/debounce.decorator'
 
 @Component({
   selector: 'app-navigation',
@@ -15,12 +16,27 @@ export class NavigationComponent implements OnInit {
     this.preventScroll = document;
   }
 
-  preventScroll: Document
+  preventScroll: Document;
   active = false;
   langFlag = false;
+
   @ViewChild("navbar") navbar: ElementRef;
   @ViewChild("Eng") Eng: ElementRef;
   @ViewChild("Geo") Geo: ElementRef;
+
+  // sticky navbar
+  @HostListener("window:scroll", [])
+  @debounce(50)
+  onScroll() {
+    let currentScrollPos = window.pageYOffset;
+    console.log('test');
+
+    if(currentScrollPos > 0){
+      this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
+    }else{
+      this.renderer.removeClass(this.navbar.nativeElement, "navbar__sticky");
+    };
+  }
 
   // navigation - scroll back
   navbarScroll(){
