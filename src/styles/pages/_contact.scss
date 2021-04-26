@@ -66,6 +66,12 @@
     font-size: 14px;
     font-weight: 600;
   }
+
+  .contact__phone{
+    font-family: $tertiary-font;
+    text-decoration: underline;
+    font-size: 12px;
+  }
 }
 
 @media (min-width: 640px){
