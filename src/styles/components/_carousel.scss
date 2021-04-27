@@ -1,15 +1,16 @@
 .carousel {
   @extend %flex--centring;
   flex-direction: column;
-  text-decoration: underline;
   opacity: 0;
   max-width: 1500px;
   margin-bottom: 60px;
 
   .carousel__title{
     font-size: 2rem;
-    margin: 0;
-    color: $secondary-color;
+    margin: 8rem 0 3rem 0;
+    color: $tertiary-color;
+    font-style: italic;
+    text-decoration: none;
   }
 
   .carousel__content {
