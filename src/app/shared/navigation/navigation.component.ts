@@ -29,7 +29,6 @@ export class NavigationComponent implements OnInit {
   @debounce(50)
   onScroll() {
     let currentScrollPos = window.pageYOffset;
-    console.log('test');
 
     if(currentScrollPos > 0){
       this.renderer.addClass(this.navbar.nativeElement, "navbar__sticky");
