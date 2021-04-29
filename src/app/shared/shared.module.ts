@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { LazyImgDirective } from './helpers/LazyImg.directive';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
@@ -10,7 +11,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 }
 
 @NgModule({
-  declarations: [],
+  declarations: [LazyImgDirective],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -25,7 +26,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   exports: [
     CommonModule,
     HttpClientModule,
-    TranslateModule
+    TranslateModule,
+    LazyImgDirective
   ]
 })
 export class SharedModule { }
