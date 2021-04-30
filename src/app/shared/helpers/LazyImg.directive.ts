@@ -6,7 +6,6 @@ export class LazyImgDirective {
   private observer: IntersectionObserver | undefined;
   lazyImage;
 
-
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {
     this.observer = new IntersectionObserver( entries => {
       entries.forEach(entry => {
@@ -18,7 +17,6 @@ export class LazyImgDirective {
         }
       });
     });
-
     this.observer.observe(this.elementRef.nativeElement as HTMLElement);
   }
 
