@@ -4,13 +4,15 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
 export class LazyImgDirective {
 
   private observer: IntersectionObserver | undefined;
+  lazyImage;
+
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {
     this.observer = new IntersectionObserver( entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // this.renderer.addClass(this.elementRef.nativeElement, 'fadeInAnim');
-          console.log(entry.target);
+          this.lazyImage = entry.target;
+          this.lazyImage.src = this.lazyImage.dataset.src
 
           this.observer.unobserve(entry.target);
         }
