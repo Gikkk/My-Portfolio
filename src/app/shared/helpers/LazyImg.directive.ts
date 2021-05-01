@@ -6,6 +6,10 @@ export class LazyImgDirective {
   private observer: IntersectionObserver | undefined;
   lazyImage;
 
+  options = {
+    rootMargin: '200px',
+    threshold: 0.2
+  };
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {
     this.observer = new IntersectionObserver( entries => {
       entries.forEach(entry => {
@@ -16,7 +20,7 @@ export class LazyImgDirective {
           this.observer.unobserve(entry.target);
         }
       });
-    });
+    }, this.options);
     this.observer.observe(this.elementRef.nativeElement as HTMLElement);
   }
 
