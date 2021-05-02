@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
@@ -10,17 +10,13 @@ export class HomepageComponent implements OnInit {
 
   constructor( private title: Title, private meta: Meta ) {}
 
-  @ViewChild('background') mainBackground: ElementRef;
-
-  currentTime;
-  hour: number;
   myStyle: object = {};
   myParams: object = {};
   windowHeight: number;
 
   // particles details and screen resize event
-  onResize($event){
-    this.windowHeight = $event.target.innerHeight;
+  onResize(){
+    this.windowHeight = window.innerHeight;
     this.myStyle = {
       'height': `${this.windowHeight}px`,
       'background': "transperent",
@@ -131,7 +127,7 @@ export class HomepageComponent implements OnInit {
 
   // setting meta tags dynamically
   ngOnInit() {
-    // this.onResize();
+    this.onResize();
     this.title.setTitle("Home - Angular Developer Portfolio");
 
     this.meta.updateTag({ name: 'og:title', content: 'Home - Developer portfolio' });
