@@ -19,8 +19,8 @@ export class HomepageComponent implements OnInit {
   windowHeight: number;
 
   // particles details and screen resize event
-  onResize(){
-    this.windowHeight = window.innerHeight;
+  onResize($event){
+    this.windowHeight = $event.target.innerHeight;
     this.myStyle = {
       'height': `${this.windowHeight}px`,
       'background': "transperent",
@@ -131,7 +131,7 @@ export class HomepageComponent implements OnInit {
 
   // setting meta tags dynamically
   ngOnInit() {
-    this.onResize();
+    // this.onResize();
     this.title.setTitle("Home - Angular Developer Portfolio");
 
     this.meta.updateTag({ name: 'og:title', content: 'Home - Developer portfolio' });

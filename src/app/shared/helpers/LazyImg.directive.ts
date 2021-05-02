@@ -7,7 +7,7 @@ export class LazyImgDirective {
   lazyImage;
 
   options = {
-    rootMargin: '200px',
+    rootMargin: '150px',
     threshold: 0.2
   };
   constructor(private renderer: Renderer2, private elementRef: ElementRef) {
