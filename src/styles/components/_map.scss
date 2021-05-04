@@ -1,10 +1,15 @@
 #map{
   height: 400px;
-  margin: 4rem 0 0 0;
   padding-bottom: 1rem;
   position: relative;
   overflow: hidden;
   max-width: 1500px;
+}
+
+.map__header{
+  color: $tertiary-color;
+  margin: 5rem 0 2rem 0;
+  text-align: center;
 }
 
 .map__overlay{
@@ -31,7 +36,7 @@
 @media (min-width: 640px){
   #map{
     height: 650px;
-    margin: 4rem 2rem 0 2rem;
+    margin: 0 2rem;
     padding-bottom: 2rem;
   }
 
@@ -46,7 +51,7 @@
 
 @media(min-width: 1024px){
   #map{
-    margin: 4rem 4rem 0 4rem;
+    margin: 0 4rem;
     padding-bottom: 2rem;
   }
 }

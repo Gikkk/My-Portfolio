@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar" #navbar>
     <!-- desktop navbar  -->
-    <section class="navbar__desktop">
+    <div class="navbar__desktop">
       <ul class="navbar__list">
         <li><a (click)="navbarScroll()" class="navbar__item"  [translate]="'nav.home'"  [routerLinkActiveOptions]="{exact: true}" routerLink="/home" routerLinkActive='navbar__active'>Home</a></li>
         <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.about'"  routerLink="/about" routerLinkActive='navbar__active' >About</a></li>
@@ -13,23 +13,23 @@
         <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.projects'"  routerLink="/projects" routerLinkActive='navbar__active' >Work</a></li>
         <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.contact'" routerLink="/contact" routerLinkActive='navbar__active' >Reach </a></li>
       </ul>
-    </section>
+    </div>
     <!-- language bar  -->
-    <section class="navbar__language">
+    <div class="navbar__language">
       <img src="assets/language/geo.png" alt="geo flag" (click)="langChange('ge')" *ngIf="!langFlag" [@inOutAnimation]>
       <img src="assets/language/usa.png" alt="usa flag" (click)="langChange('en')" *ngIf="langFlag" [@inOutAnimation]>
-    </section>
+    </div>
 
     <!-- hamburger menu icon -->
-    <section class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
+    <div class="hamburger" (click)="activeClass()" [ngClass]="{'open' : active}">
       <div class="hamburger__line hamburger__line--half hamburger__line--start"></div>
       <div class="hamburger__line"></div>
       <div class="hamburger__line hamburger__line--half hamburger__line--end"></div>
-    </section>
+    </div>
 
     <!-- mobile navbar -->
-    <section class="mobnav" [ngClass]="{'mobnav__active' : active}">
-      <article>
+    <div class="mobnav" [ngClass]="{'mobnav__active' : active}">
+      <div>
         <ul class="mobnav__list" >
           <li routerLink="/home" (click)="activeClass()" (click)="navbarScroll()">
             <img src="assets/mob-nav/homepage.png" alt="homepage icon" >
@@ -49,17 +49,17 @@
             <a class="mobnav__item" [translate]="'nav.contact'" routerLinkActive='navbar__active'>Reach</a>
           </li>
         </ul>
-      </article>
+      </div>
       <div class="mobnav__line"></div>
       <div class="mobnav__line"></div>
-      <article>
+      <section>
         <h4 [translate]="'nav.language'">Language</h4>
         <div>
           <button type="button"  class=" mobnav__btn mobnav__btn--active" (click)="langChange('en')" #Eng>English</button>
           <button type="button" class="mobnav__btn" (click)="langChange('ge')" #Geo>ქართული</button>
         </div>
-      </article>
-    </section>
+      </section>
+    </div>
 
   </nav>
   <div class="mobnav__space" (click)="activeClass()" [ngClass]="{'mobnav__space--active' : active}"></div>

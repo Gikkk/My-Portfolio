@@ -2,8 +2,8 @@
   <h1 class="contact__title" [translate]="'contact.title'" ></h1>
   <h3 class="contact__greet" [translate]="'contact.subtitle'">Write me about anything or just say hello</h3>
 
-  <section class="contact__box" #fadeInAnim>
-    <article class="form__container">
+  <div class="contact__box" #fadeInAnim>
+    <section class="form__container">
       <h3 class="form__title" [translate]="'contact.msg-title'">SEND ME A MESSAGE</h3>
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
         <div class="form__item">
@@ -43,9 +43,9 @@
           <span *ngIf="submitted" class="form__success" [translate]="'contact.msg-succ'">Successfully Submitted</span>
         </div>
       </form>
-    </article>
+    </section>
 
-    <article class="contact__details">
+    <section class="contact__details">
       <h3 [translate]="'contact.info-title'">CONTACT INFO</h3>
       <h4 [translate]="'contact.info-loc'" class="contact__subtitle">Where to find me</h4>
       <div class="contact__item">
@@ -67,8 +67,8 @@
         <span class="contact__status"></span>
         <p [translate]="'contact.status'" class="contact__text">Available</p>
       </div>
-    </article>
-  </section>
+    </section>
+  </div>
 
   <!-- map section  -->
   <app-map></app-map>
