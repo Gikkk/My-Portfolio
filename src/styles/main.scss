@@ -1,23 +1,28 @@
 @import "../../node_modules/ol/ol.css";
 
+// abstracts
 @import "./abstracts/variables";
 @import "./abstracts/placeholder";
 
+// base
 @import "./base/general";
 @import "./base/normalize";
 @import "./base/supporting";
 
-@import "./components/carousel";
+// components
+@import "./components/tech-stack";
 @import "./components/hamburger";
 @import "./components/card";
 @import "./components/focus";
 @import "./components/map";
+@import "./components/forms";
 
+// layout
 @import "./layout/navigation";
-@import "./layout/forms";
 @import "./layout/circular-menu";
 @import "./layout/footer";
 
+// pages
 @import "./pages/homepage";
 @import "./pages/about";
 @import "./pages/projects";
