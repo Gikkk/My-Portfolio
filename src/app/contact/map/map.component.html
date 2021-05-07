@@ -1,5 +1,7 @@
 <section>
   <h2 class="map__header">Check my location</h2>
+
+  <!-- map  -->
   <div id="map">
     <div class="map__overlay" (wheel)="onMouseWheel()" *ngIf="mapOverlay" (click)="onMouseClick()" #mapOverlay></div>
     <div class="map__overlay--text" *ngIf="mapZoom" (click)="onMouseClick()" [@enterAnimation]>

@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CircularMenuComponent implements OnInit {
 
-  constructor() { }
-
   active = false;
+
+  constructor() { }
 
   // menu open/close
   activeClass(){

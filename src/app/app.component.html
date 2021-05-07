@@ -1,13 +1,14 @@
 <!-- navigation comp  -->
 <app-navigation></app-navigation>
+
 <!-- routing components  -->
-<main>
-  <div [@triggerAnimation]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
-  </div>
+<main [@triggerAnimation]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </main>
+
 <!-- circular menu   -->
 <app-circular-menu></app-circular-menu>
+
 <!-- footer comp  -->
 <app-footer></app-footer>
 

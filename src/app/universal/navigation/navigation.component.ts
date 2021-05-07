@@ -12,13 +12,13 @@ import { debounce} from '../../shared/decorators/debounce.decorator'
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(@Inject(DOCUMENT) document, private renderer: Renderer2, private translate: TranslateService){
-    this.preventScroll = document;
-  }
-
   preventScroll: Document;
   active = false;
   langFlag = false;
+
+  constructor(@Inject(DOCUMENT) document, private renderer: Renderer2, private translate: TranslateService){
+    this.preventScroll = document;
+  }
 
   @ViewChild("navbar") navbar: ElementRef;
   @ViewChild("Eng") Eng: ElementRef;
@@ -42,7 +42,7 @@ export class NavigationComponent implements OnInit {
     setTimeout(() => { window.scrollTo({top: 0, behavior: "smooth"}) }, 300)
   }
 
-  // mobnav menu
+  // mobnav menu prevent scroll
   activeClass(){
     this.active = !this.active;
     if(this.active){

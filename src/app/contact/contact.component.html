@@ -5,6 +5,8 @@
   <div class="contact__box" #fadeInAnim>
     <section class="form__container">
       <h3 class="form__title" [translate]="'contact.msg-title'">SEND ME A MESSAGE</h3>
+
+      <!-- messenge section  -->
       <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="form">
         <div class="form__item">
           <label for="name" class="form__label" [translate]="'contact.msg-name'">Your Name</label>
@@ -43,8 +45,10 @@
           <span *ngIf="submitted" class="form__success" [translate]="'contact.msg-succ'">Successfully Submitted</span>
         </div>
       </form>
+
     </section>
 
+    <!-- contact info section  -->
     <section class="contact__details">
       <h3 [translate]="'contact.info-title'">CONTACT INFO</h3>
       <h4 [translate]="'contact.info-loc'" class="contact__subtitle">Where to find me</h4>
