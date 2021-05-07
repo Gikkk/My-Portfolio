@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {  RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { routeTransitionAnimations } from './shared/helpers/route-transition-animations';
+import { routeTransitionAnimations } from './shared/animations/route-transition-animations';
 
 @Component({
   selector: 'app-root',

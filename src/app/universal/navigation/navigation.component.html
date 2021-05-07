@@ -7,7 +7,7 @@
         <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.about'"  routerLink="/about" routerLinkActive='navbar__active' >About</a></li>
       </ul>
       <a>
-        <img class="navbar__logo" src="assets/general/logo.png" alt="logo" routerLink="/">
+        <img class="navbar__logo" src="assets/images/general/logo.png" alt="logo" routerLink="/">
       </a>
       <ul class="navbar__list">
         <li><a (click)="navbarScroll()" class="navbar__item" [translate]="'nav.projects'"  routerLink="/projects" routerLinkActive='navbar__active' >Work</a></li>
@@ -16,8 +16,8 @@
     </div>
     <!-- language bar  -->
     <div class="navbar__language">
-      <img src="assets/language/geo.png" alt="geo flag" (click)="langChange('ge')" *ngIf="!langFlag" [@inOutAnimation]>
-      <img src="assets/language/usa.png" alt="usa flag" (click)="langChange('en')" *ngIf="langFlag" [@inOutAnimation]>
+      <img src="assets/images/language/geo.png" alt="geo flag" (click)="langChange('ge')" *ngIf="!langFlag" [@inOutAnimation]>
+      <img src="assets/images/language/usa.png" alt="usa flag" (click)="langChange('en')" *ngIf="langFlag" [@inOutAnimation]>
     </div>
 
     <!-- hamburger menu icon -->
@@ -32,20 +32,20 @@
       <div>
         <ul class="mobnav__list" >
           <li routerLink="/home" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/homepage.png" alt="homepage icon" >
+            <img src="assets/images/mob-nav/homepage.png" alt="homepage icon" >
             <a class="mobnav__item" [translate]="'nav.home'" [routerLinkActiveOptions]="{exact: true}"  routerLinkActive='navbar__active'>Home</a>
           </li>
           <li routerLink="/about" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/settings.png" alt="about icon" >
+            <img src="assets/images/mob-nav/settings.png" alt="about icon" >
             <a class="mobnav__item" [translate]="'nav.about'" routerLinkActive='navbar__active'> About</a>
           </li>
           <div class="mobnav__line--middle"></div>
           <li routerLink="/projects" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/aim.png" alt="projects icon" >
+            <img src="assets/images/mob-nav/aim.png" alt="projects icon" >
             <a class="mobnav__item" [translate]="'nav.projects'" routerLinkActive='navbar__active'>Works</a>
           </li>
           <li routerLink="/contact" (click)="activeClass()" (click)="navbarScroll()">
-            <img src="assets/mob-nav/question.png" alt="contact icon" >
+            <img src="assets/images/mob-nav/question.png" alt="contact icon" >
             <a class="mobnav__item" [translate]="'nav.contact'" routerLinkActive='navbar__active'>Reach</a>
           </li>
         </ul>

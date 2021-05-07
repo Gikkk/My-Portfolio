@@ -1,8 +1,8 @@
 import { Component, ViewChild, ElementRef, Renderer2, OnInit, Inject, HostListener } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
-import {fadeInAnimation} from '../helpers/fadeInAnimation';
-import { debounce} from '../helpers/debounce.decorator'
+import {fadeInAnimation} from '../../shared/animations/fadeInAnimation';
+import { debounce} from '../../shared/decorators/debounce.decorator'
 
 @Component({
   selector: 'app-navigation',
